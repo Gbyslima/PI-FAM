@@ -1,0 +1,14 @@
+/* Responsivo */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,319 @@
+/* Tela Início */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #EBFFF5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #87CEEB;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #2c3e50;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #87CEEB, #EBFFF5);
+    padding: 100px 20px;
+    animation: fade-in-up 1s ease forwards;
+    opacity: 0;
+    background-size: cover; /* Garante que a imagem de fundo seja responsiva */
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.btn {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a252f;
+}
+
+.about,
+.services,
+.contact,
+.servicess {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fade-in-up 1s ease forwards;
+    opacity: 0;
+}
+
+/* Animação base */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay suave para criar efeito escalonado */
+.hero { animation-delay: 0.2s; }
+.about { animation-delay: 0.4s; }
+.services { animation-delay: 0.6s; }
+.servicess { animation-delay: 0.8s; }
+.contact { animation-delay: 1s; }
+
+.about-content,
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+/* NOVO: Separação do texto na seção about */
+.about-content .text {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.03);
+}
+
+.services h2,
+.servicess h2,
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.service-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.contact-container {
+    flex-direction: row;
+}
+
+.left-panel img {
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.right-panel {
+    flex: 1;
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+form button {
+    padding: 0.75rem;
+    background-color: #87CEEB;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #5cbde6;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 40px;
+}
+
+/* RESPONSIVO: empilha texto e imagem no celular */
+@media (max-width: 768px) {
+    .about-content,
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content .text {
+        text-align: center;
+    }
+
+    .about-content img,
+    .left-panel img {
+        margin-top: 1.5rem;
+    }
+
+    .right-panel {
+        width: 100%;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* PARA TELAS MUITO GRANDES (DESKTOPS) */
+@media (min-width: 1200px) {
+    .service-cards {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 22%;
+    }
+}
+
+.destaque {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Garante que as animações só iniciem quando carregado */
+body.loaded .hero,
+body.loaded .about,
+body.loaded .services,
+body.loaded .servicess,
+body.loaded .contact {
+    opacity: 1;
+}
+/* fim css inicio */

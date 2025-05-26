@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="css/confirmarsenha.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="left-panel">
+      <img src="imagens/clinica.png" alt="Imagem de Segurança" class="login-image">
+    </div>
+    <div class="right-panel">
+      <h1>Nova Senha</h1>
+      <p class="subtitle">Digite sua nova senha abaixo para continuar.</p>
+      
+      <div id="erroSenha" class="mensagem-erro">As senhas não coincidem. Por favor, tente novamente.</div>
+
+      <form id="senhaForm" action="/nova-senha" method="POST">
+        <label for="senha">Nova Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+
+        <button type="submit">Redefinir Senha</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/validarSenha.js"></script>
+</body>
+</html>

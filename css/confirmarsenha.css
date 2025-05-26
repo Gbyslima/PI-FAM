@@ -1,0 +1,172 @@
+/* tela de redefinir senha */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #EBFFF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+  
+  .left-panel {
+    flex: 1;
+    background: #dffaf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .login-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+  }
+  
+  .right-panel {
+    flex: 1;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  .right-panel h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  form input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .mensagem-erro,
+  .validacoes {
+    color: #d9534f;
+    background-color: #fcebea;
+    border: 1px solid #f5c6cb;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mensagem-erro {
+    display: none;
+  }
+  
+  .validacoes p {
+    margin: 0.3rem 0;
+  }
+  
+  .validacoes .ok {
+    color: #28a745;
+  }
+  
+  button {
+    padding: 0.9rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a252f;
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .left-panel {
+      display: none;
+    }
+  
+    .right-panel {
+      padding: 2rem;
+    }
+  }
+  /* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 0.9rem;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a252f;
+  }
+  
+  
